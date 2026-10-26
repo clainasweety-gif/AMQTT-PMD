@@ -1,0 +1,113 @@
+{
+  "n_trials": 30,
+  "throughput_messages_per_trial": 200,
+  "latency_64B": {
+    "payload_bytes": 64,
+    "label": "64B",
+    "PMD-AMQTT": {
+      "mean_ms": 1.9026,
+      "sd_ms": 0.2811,
+      "ci95": [
+        1.7976,
+        2.0075
+      ]
+    },
+    "MQTT-TLS": {
+      "mean_ms": 0.0115,
+      "sd_ms": 0.0123,
+      "ci95": [
+        0.0069,
+        0.016
+      ]
+    },
+    "CoAP-DTLS": {
+      "mean_ms": 0.0055,
+      "sd_ms": 0.0015,
+      "ci95": [
+        0.005,
+        0.006
+      ]
+    },
+    "overhead_bytes": {
+      "PMD-AMQTT": 32,
+      "MQTT-TLS": 28,
+      "CoAP-DTLS": 41
+    },
+    "ttest_vs_MQTT-TLS": {
+      "t": 36.816,
+      "p": 5.72116989819761e-26
+    },
+    "ttest_vs_CoAP-DTLS": {
+      "t": 36.967,
+      "p": 5.972513370584276e-26
+    }
+  },
+  "latency_2048B": {
+    "payload_bytes": 2048,
+    "label": "2048B",
+    "PMD-AMQTT": {
+      "mean_ms": 41.048,
+      "sd_ms": 4.8117,
+      "ci95": [
+        39.2513,
+        42.8447
+      ]
+    },
+    "MQTT-TLS": {
+      "mean_ms": 0.0251,
+      "sd_ms": 0.0052,
+      "ci95": [
+        0.0232,
+        0.0271
+      ]
+    },
+    "CoAP-DTLS": {
+      "mean_ms": 0.0089,
+      "sd_ms": 0.001,
+      "ci95": [
+        0.0085,
+        0.0092
+      ]
+    },
+    "overhead_bytes": {
+      "PMD-AMQTT": 32,
+      "MQTT-TLS": 28,
+      "CoAP-DTLS": 41
+    },
+    "ttest_vs_MQTT-TLS": {
+      "t": 46.697,
+      "p": 7.61709847288097e-29
+    },
+    "ttest_vs_CoAP-DTLS": {
+      "t": 46.716,
+      "p": 7.531805377761789e-29
+    }
+  },
+  "throughput_64B": {
+    "PMD-AMQTT": {
+      "mean_msgs_per_sec": 475.9,
+      "sd": 11.6,
+      "ci95": [
+        471.6,
+        480.3
+      ]
+    },
+    "MQTT-TLS": {
+      "mean_msgs_per_sec": 7761.4,
+      "sd": 261.4,
+      "ci95": [
+        7663.8,
+        7859.0
+      ]
+    },
+    "CoAP-DTLS": {
+      "mean_msgs_per_sec": 7816.0,
+      "sd": 260.5,
+      "ci95": [
+        7718.8,
+        7913.3
+      ]
+    }
+  },
+  "latency_5MB_20MB": "skipped -- see README.md"
+}
